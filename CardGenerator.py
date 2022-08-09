@@ -824,11 +824,10 @@ class MonsterCardLayout(CardLayout):
         )
 
         # Subtitle
+        style = self.fonts.paragraph_styles["subtitle"]
+        style.backColor = self.border_color
         self.elements.append(
-            Paragraph(
-                self.subtitle,
-                self.fonts.paragraph_styles["subtitle"],
-            )
+            Paragraph(self.subtitle, style)
         )
 
         top_stats = [
@@ -1059,11 +1058,10 @@ class ItemCardLayout(CardLayout):
         self.elements.append(self._get_title_paragraph())
 
         # Subtitle
+        style = self.fonts.paragraph_styles["subtitle"]
+        style.backColor = self.border_color
         self.elements.append(
-            Paragraph(
-                self.subtitle,
-                self.fonts.paragraph_styles["subtitle"],
-            )
+            Paragraph(self.subtitle, style)
         )
 
         # Add a space before text
